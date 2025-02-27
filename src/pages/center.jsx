@@ -8,6 +8,8 @@ import {
   FaTimes,
 } from "react-icons/fa";
 import { Carousel } from "react-responsive-carousel";
+import { motion } from "framer-motion";
+
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import Bangalore from "../assets/images/banglore.webp";
