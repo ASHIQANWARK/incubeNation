@@ -19,7 +19,7 @@ const Navbar = () => {
   const closeMobileMenu = () => setIsOpen(false);
 
   return (
-    <nav className="bg-transparent fixed w-full z-10">
+    <nav className="bg-[#061428] fixed w-full z-10">
       <div className="container mx-auto flex justify-between items-center p-4">
         {/* Logo */}
         <div className="flex items-center space-x-2">
@@ -70,7 +70,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white/90">
+        <div className="md:hidden bg-black">
           <div className="flex flex-col space-y-2 p-4">
             <Link onClick={closeMobileMenu} to="/" className="text-black hover:text-gray-700">Home</Link>
             <Link onClick={closeMobileMenu} to="/about" className="text-black hover:text-gray-700">About</Link>
