@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import HeroImage from "../assets/images/img3.png"; 
+import HeroImage from "../assets/images/img3.png";
+import IncubationNationIcon from "../assets/images/incubenation-DP-3.png";
 
-import IncubationNationIcon from "../assets/images/incubenation-DP-3.png"; 
-
+// Extracted data to keep component clean
 const focuses = [
   {
     title: "Incubation Center",
@@ -39,17 +39,19 @@ const focuses = [
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex flex-col justify-center items-center bg-gradient-to-b from-[#061428] to-[#0b1c3a] px-6 py-16 lg:py-24">
-      
-      <div className="container mx-auto flex flex-col lg:flex-row items-center gap-12">
-        
-        {/* Left Side: Hero Image */}
+      <div className=" container mx-auto  flex flex-col lg:flex-row items-center gap-12">
+        {/* Left: Hero Image */}
         <div className="lg:w-1/2 flex justify-center">
           <div className="relative w-full max-w-md lg:max-w-lg">
-            <img src={HeroImage} alt="Startup Incubator" className="w-full rounded-2xl " />
+            <img
+              src={HeroImage}
+              alt="Incubation Hub - Startup Growth Platform"
+              className="w-full rounded-2xl "
+            />
           </div>
         </div>
 
-        {/* Right Side: Text Content */}
+        {/* Right: Hero Text */}
         <div className="lg:w-1/2 text-center lg:text-left">
           <h1 className="text-5xl lg:text-6xl font-extrabold leading-tight text-white">
             Where Startups Hatch, Grow, <br />
@@ -57,8 +59,7 @@ const Hero = () => {
           </h1>
           <p className="text-lg mt-5 text-gray-300 font-medium leading-relaxed">
             Ignite your entrepreneurial journey with{" "}
-            <span className="text-green-400 font-semibold">IncubeNation</span>,
-            where ideas transform into thriving businesses through expert mentorship, funding access, and strategic partnerships.
+            <span className="text-green-400 font-semibold">IncubeNation</span>, where ideas transform into thriving businesses through expert mentorship, funding access, and strategic partnerships.
           </p>
           <div className="mt-8">
             <Link
@@ -73,7 +74,9 @@ const Hero = () => {
 
       {/* Focus Areas Section */}
       <div className="relative mt-16 w-full px-4">
-        <h2 className="text-4xl font-bold text-center mb-12 text-white">Our Programs</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 text-white">
+          Our Programs
+        </h2>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {focuses.map((item, index) => (
@@ -81,11 +84,21 @@ const Hero = () => {
               key={index}
               className="flex flex-col items-center bg-white/10 backdrop-blur-md rounded-xl p-6 shadow-lg transition-transform duration-300 hover:-translate-y-3 hover:shadow-2xl relative"
             >
-              <img src={item.icon} alt="Focus Icon" className="w-16 h-16 mb-3" /> 
-              <h3 className="text-2xl font-semibold text-gray-200 mt-4">{item.title}</h3>
-              <p className="text-gray-300 text-sm text-center mt-2">{item.description}</p>
+              <img
+                src={item.icon}
+                alt={`Icon for ${item.title}`}
+                className="w-16 h-16 mb-3"
+              />
+              <h3 className="text-2xl font-semibold text-gray-200 mt-4">
+                {item.title}
+              </h3>
+              <p className="text-gray-300 text-sm text-center mt-2">
+                {item.description}
+              </p>
               {item.tag && (
-                <span className="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full">{item.tag}</span>
+                <span className="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                  {item.tag}
+                </span>
               )}
               <Link
                 to={item.link}

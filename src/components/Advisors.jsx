@@ -1,70 +1,49 @@
-import React, { useState } from "react";
+import React from "react";
 import { Briefcase } from "lucide-react";
 
-const advisors = Array.from({ length: 100 }, (_, i) => ({
-  name: `Advisor ${i + 1}`,
-  title: "Business Strategist",
-  image: `https://randomuser.me/api/portraits/men/${i % 50}.jpg`,
-}));
+import ShefinImage from "../assets/images/shefin.jpg";
+import hashImage from "../assets/images/hashim.jpg";
+import abhiImage from "../assets/images/abhirami.jpg";
+import jinoImage from "../assets/images/jino.jpg";
+import keerthiIMG from "../assets/images/keerthi.png";
 
-const ITEMS_PER_PAGE = 15;
+const advisors = [
+  { name: "Shefin", title: "STUDY IN BANGLORE (CEO)", image: ShefinImage },
+  { name: "Hashim", title: "CAREER CAFE (CEO)", image: hashImage },
+  { name: "Abhirami", title: "FLYRAD (CEO)", image: abhiImage },
+  { name: "Jino Joseph", title: "FRANCHISIFY (CEO)", image: jinoImage },
+  { name: "Keerthi", title: "CEO SQUARE (CE0)", image: keerthiIMG },
+];
 
 const Advisors = () => {
-  const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = Math.ceil(advisors.length / ITEMS_PER_PAGE);
-
-  const paginatedAdvisors = advisors.slice(
-    (currentPage - 1) * ITEMS_PER_PAGE,
-    currentPage * ITEMS_PER_PAGE
-  );
-
   return (
-    <div className="py-12 bg-[#061428] text-white">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-6 tracking-wide">
+    <div className="py-16 bg-gradient-to-b from-[#061428] to-[#0a1931] text-white rounded-tr-full rounded-tl-full rounded-l-full rounded-r-full">
+      <div className="container mx-auto px-6">
+        {/* Section Title */}
+        <h2 className="text-4xl font-bold text-center mb-8 tracking-wide">
           Meet Our Advisors
-          <Briefcase className="inline-block w-6 h-6 ml-2 text-cyan-400" />
+          <Briefcase className="inline-block w-7 h-7 ml-3" />
         </h2>
 
         {/* Advisors Grid */}
-        <div className="grid grid-cols-3 md:grid-cols-5 gap-4">
-          {paginatedAdvisors.map((advisor, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+          {advisors.map((advisor, index) => (
             <div
               key={index}
-              className="bg-white/10 border border-cyan-400 rounded-xl p-2 flex flex-col items-center transition-transform transform hover:scale-105"
+              className="bg-white/10 backdrop-blur-lg  rounded-lg p-4 flex flex-col items-center shadow-md"
             >
+              {/* Advisor Image */}
               <img
                 src={advisor.image}
                 alt={advisor.name}
-                className="w-16 h-16 rounded-full border-2 border-cyan-400 shadow-md mb-2"
+                className="w-56 h-56 object-cover rounded-lg "
               />
-              <h3 className="text-sm font-semibold text-center">{advisor.name}</h3>
-              <p className="text-xs text-gray-300 text-center">{advisor.title}</p>
+              
+              {/* Advisor Details */}
+              <h3 className="text-lg font-semibold mt-4 text-white">{advisor.name}</h3>
+              <p className="text-sm text-gray-300 text-center mt-1">{advisor.title}</p>
             </div>
           ))}
-        </div>
-
-        {/* Pagination Controls */}
-        <div className="flex justify-center mt-6">
-          <button
-            className={`px-3 py-1 text-sm font-semibold bg-cyan-500 rounded-lg shadow-md transition 
-              ${currentPage === 1 ? "opacity-50 cursor-not-allowed" : "hover:scale-105"}`}
-            onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
-            disabled={currentPage === 1}
-          >
-            Previous
-          </button>
-          <span className="text-sm mx-4 px-3 py-1 bg-gray-700 rounded-lg">
-            Page {currentPage} of {totalPages}
-          </span>
-          <button
-            className={`px-3 py-1 text-sm font-semibold bg-cyan-500 rounded-lg shadow-md transition 
-              ${currentPage === totalPages ? "opacity-50 cursor-not-allowed" : "hover:scale-105"}`}
-            onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
-            disabled={currentPage === totalPages}
-          >
-            Next
-          </button>
         </div>
       </div>
     </div>
