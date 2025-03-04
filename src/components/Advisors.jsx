@@ -5,14 +5,13 @@ import ShefinImage from "../assets/images/shefin.jpg";
 import hashImage from "../assets/images/hashim.jpg";
 import abhiImage from "../assets/images/abhirami.jpg";
 import jinoImage from "../assets/images/jino.jpg";
-import keerthiIMG from "../assets/images/keerthi.png";
 
 const advisors = [
   { name: "Shefin", title: "STUDY IN BANGLORE (CEO)", image: ShefinImage },
   { name: "Hashim", title: "CAREER CAFE (CEO)", image: hashImage },
   { name: "Abhirami", title: "FLYRAD (CEO)", image: abhiImage },
   { name: "Jino Joseph", title: "FRANCHISIFY (CEO)", image: jinoImage },
-  { name: "Keerthi", title: "CEO SQUARE (CE0)", image: keerthiIMG },
+
 ];
 
 const Advisors = () => {
