@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import { Briefcase } from "lucide-react";
 
 import ShefinImage from "../assets/images/shefin.jpg";
@@ -7,7 +7,7 @@ import abhiImage from "../assets/images/abhirami.jpg";
 import jinoImage from "../assets/images/jino.jpg";
 
 const advisors = [
-  { name: "Shefin", title: "STUDY IN BANGLORE (CEO)", image: ShefinImage },
+  { name: "Shefin", title: "STUDY IN BANGALORE (CEO)", image: ShefinImage },
   { name: "Hashim", title: "CAREER CAFE (CEO)", image: hashImage },
   { name: "Abhirami", title: "FLYRAD (CEO)", image: abhiImage },
   { name: "Jino Joseph", title: "FRANCHISIFY (CEO)", image: jinoImage },
@@ -15,7 +15,7 @@ const advisors = [
 
 const Advisors = () => {
   return (
-    <div className="py-16 bg-gradient-to-b from-[#061428] to-[#0a1931] text-white ">
+    <div className="py-16 bg-gradient-to-b from-[#061428] to-[#0a1931] text-white">
       <div className="container mx-auto px-6">
         {/* Section Title */}
         <h2 className="text-4xl font-bold text-center mb-8 tracking-wide">
@@ -24,27 +24,26 @@ const Advisors = () => {
         </h2>
 
         {/* Advisors Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {advisors.map((advisor, index) => (
             <div
               key={index}
-              className="bg-white/10 backdrop-blur-lg rounded-lg p-4 flex flex-col items-center shadow-md"
+              className="bg-white/10 backdrop-blur-lg rounded-lg p-6 flex flex-col items-center shadow-md w-full 
+              min-h-[480px] sm:min-h-[520px] md:min-h-[560px] lg:min-h-[600px] transition-all"
             >
               {/* Advisor Image */}
-              <img
-                src={advisor.image}
-                alt={advisor.name}
-                className="w-60 h-60 object-cover rounded-lg"
-                onLoad={(event) => handleImageLoad(index, event)}
-              />
-              
+              <div className="w-full h-72 sm:h-80 md:h-96 lg:h-[420px] flex items-center justify-center">
+                <img
+                  src={advisor.image}
+                  alt={advisor.name}
+                  className="w-full h-full object-cover rounded-lg shadow-lg"
+                  onError={(e) => (e.target.src = "https://via.placeholder.com/300")}
+                />
+              </div>
+
               {/* Advisor Details */}
-              <h3 className="text-lg font-semibold mt-4 text-white">
-                {advisor.name}
-              </h3>
-              <p className="text-sm text-gray-300 text-center mt-1">
-                {advisor.title}
-              </p>
+              <h3 className="text-lg font-semibold mt-6 text-white">{advisor.name}</h3>
+              <p className="text-sm text-gray-300 text-center mt-2">{advisor.title}</p>
             </div>
           ))}
         </div>

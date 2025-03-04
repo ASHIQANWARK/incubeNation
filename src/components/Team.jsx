@@ -32,8 +32,8 @@ const Team = () => {
               key={index}
               className="bg-gradient-to-b from-[#061428] to-[#0b1c3a] rounded-lg shadow-lg overflow-hidden p-6 flex flex-col items-center transition-all hover:shadow-xl hover:scale-105 w-full h-[450px]"
             >
-              {/* Profile Image (Full Width & Height in Card) */}
-              <div className="w-full h-60 mb-4">
+              {/* Profile Image (Fixed Min Height for Mobile) */}
+              <div className="w-full min-h-[240px] md:h-60 mb-4 flex-grow">
                 <img
                   src={member.image}
                   alt={member.name}
