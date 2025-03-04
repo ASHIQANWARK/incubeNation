@@ -29,10 +29,10 @@ const Advisors = () => {
             <div
               key={index}
               className="bg-white/10 backdrop-blur-lg rounded-lg p-6 flex flex-col items-center shadow-md w-full 
-              min-h-[480px] sm:min-h-[520px] md:min-h-[560px] lg:min-h-[600px] transition-all"
+              min-h-[520px] sm:min-h-[550px] md:min-h-[580px] lg:min-h-[600px] transition-all"
             >
               {/* Advisor Image */}
-              <div className="w-full h-72 sm:h-80 md:h-96 lg:h-[420px] flex items-center justify-center">
+              <div className="w-full h-88 sm:h-96 md:h-[420px] lg:h-[560px] flex items-center justify-center">
                 <img
                   src={advisor.image}
                   alt={advisor.name}
