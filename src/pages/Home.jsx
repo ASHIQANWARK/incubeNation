@@ -4,7 +4,7 @@ import VisionMission from "./VisionMission";
 import Advisors from "../components/Advisors";
 import Team from "../components/Team";
 import ChatBot from "../components/ChatBot";
-
+import FAQ from "../pages/FAQ";
 import EcosystemSection from "./Ecosystem";
 import Offerings from "./Offerings";
 import LatestBlog from "./LatestBlog";
@@ -21,6 +21,7 @@ const Home = () => {
       <EcosystemSection />
       <Offerings />
       <Testimonial />
+      <FAQ />
       <Team />
       <LatestBlog />   
       <ChatBot />

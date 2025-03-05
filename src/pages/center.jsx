@@ -26,7 +26,6 @@ import akam from "../assets/images/akam-logo-green.png";
 import img20 from "../assets/images/img20.jpg";
 import art1 from "../assets/images2/art1.jpg";
 import art2 from "../assets/images2/art2.jpg";
-import art3 from "../assets/images2/art3.jpg";
 import art4 from "../assets/images2/art4.jpg";
 import art5 from "../assets/images2/art5.jpg";
 import art6 from "../assets/images2/art6.jpg";
@@ -166,7 +165,6 @@ const LocationCard = ({ city, image, comingSoon }) => (
 const images = [
   { src: art1, alt: "Art 1" },
   { src: art2, alt: "Art 2" },
-  { src: art3, alt: "Art 3" },
   { src: art4, alt: "Art 4" },
   { src: art5, alt: "Art 5" },
   { src: art6, alt: "Art 6" },
