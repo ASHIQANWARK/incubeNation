@@ -12,10 +12,10 @@ const VisionMission = () => {
   }, []);
 
   return (
-    <section className="relative py-20 bg-gray-100">
+    <section className="relative py-20 bg-gray-100 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-16 space-y-20">
         {/* About Section */}
-        <div className="text-center max-w-4xl mx-auto space-y-6">
+        <div className="text-center max-w-4xl mx-auto space-y-6 animate__animated animate__fadeInUp animate__slow">
           <h2 className="text-4xl font-bold text-[#061428] font-serif">
             About IncubeNation
           </h2>
@@ -35,11 +35,11 @@ const VisionMission = () => {
           <div
             className={`lg:w-1/2 transition-opacity duration-700 ${
               isVisible
-                ? "opacity-100 animate__animated animate__fadeInLeft"
+                ? "opacity-100 animate__animated animate__slideInLeft animate__slow"
                 : "opacity-0"
             }`}
           >
-            <div className="relative p-10 rounded-3xl bg-[#061428]  shadow-xl space-y-6 backdrop-blur-md border border-white/20">
+            <div className="relative p-10 rounded-3xl bg-[#061428] shadow-xl space-y-6 backdrop-blur-md border border-white/20">
               <h2 className="text-4xl font-bold text-white font-serif">
                 Our Vision
               </h2>
@@ -54,7 +54,7 @@ const VisionMission = () => {
           <div
             className={`lg:w-1/2 transition-opacity duration-1000 ${
               isVisible
-                ? "opacity-100 animate__animated animate__fadeInRight delay-300"
+                ? "opacity-100 animate__animated animate__zoomIn animate__delay-1s"
                 : "opacity-0"
             }`}
           >
@@ -62,7 +62,7 @@ const VisionMission = () => {
               <img
                 src={Image2}
                 alt="Our Vision"
-                className="w-full h-80 object-cover transition-transform duration-500 hover:scale-105 rounded-3xl"
+                className="w-full h-80 object-cover transition-transform duration-500 hover:scale-110 rounded-3xl"
               />
             </div>
           </div>
@@ -73,7 +73,7 @@ const VisionMission = () => {
           <div
             className={`lg:w-1/2 transition-opacity duration-700 ${
               isVisible
-                ? "opacity-100 animate__animated animate__fadeInRight delay-500"
+                ? "opacity-100 animate__animated animate__slideInRight animate__slow"
                 : "opacity-0"
             }`}
           >
@@ -93,7 +93,7 @@ const VisionMission = () => {
           <div
             className={`lg:w-1/2 transition-opacity duration-1000 ${
               isVisible
-                ? "opacity-100 animate__animated animate__fadeInLeft delay-700"
+                ? "opacity-100 animate__animated animate__zoomIn animate__delay-1s"
                 : "opacity-0"
             }`}
           >
@@ -101,7 +101,7 @@ const VisionMission = () => {
               <img
                 src={Image3}
                 alt="Our Mission"
-                className="w-full h-80 object-cover transition-transform duration-500 hover:scale-105 rounded-3xl"
+                className="w-full h-80 object-cover transition-transform duration-500 hover:scale-110 rounded-3xl"
               />
             </div>
           </div>
