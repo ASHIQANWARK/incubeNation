@@ -2,7 +2,6 @@ import React from "react";
 import {
   FaFacebookF,
   FaInstagram,
-  FaX,
   FaLinkedin,
 } from "react-icons/fa";
 import Logo from "../assets/images/incubenation1.png"; // Adjust the path as needed
