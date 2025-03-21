@@ -2,7 +2,7 @@ import React from "react";
 import {
   FaFacebookF,
   FaInstagram,
-  FaWhatsapp,
+  FaX,
   FaLinkedin,
 } from "react-icons/fa";
 import Logo from "../assets/images/incubenation1.png"; // Adjust the path as needed
@@ -88,7 +88,7 @@ const Footer = () => {
 
             {/* LinkedIn */}
             <a
-              href="#"
+              href="https://www.linkedin.com/company/incubenation"
               aria-label="LinkedIn"
               className="text-[#1358f9] transition duration-300 hover:scale-110 hover:opacity-80"
             >

@@ -9,10 +9,50 @@ import arunImage from "../assets/images/arun.jpg";
 import varshaImage from "../assets/images/varsha.jpg";
 
 const team = [
-  { name: "Shafi Shoukath", role: "CHAIRMAN", image: shafiImage },
-  { name: "Indumathi Murthy", role: "CEO", image: indumathiImage },
-  { name: "Varsha Sivanarayanan", role: "CFO", image: varshaImage },
-  { name: "Arundas M V", role: "CSO", image: arunImage },
+  {
+    name: "Shafi Shoukath",
+    role: "CHAIRMAN",
+    image: shafiImage,
+    social: {
+      instagram: "https://www.instagram.com/shafishoukath?igsh=MWM0Nnk5NDRtN2g3bA==",
+      twitter: "https://twitter.com/shafi",
+      linkedin: "https://www.linkedin.com/in/shafi-shoukath/",
+      facebook: "https://facebook.com/shafi",
+    },
+  },
+  {
+    name: "Indumathi Murthy",
+    role: "CEO",
+    image: indumathiImage,
+    social: {
+      instagram: "https://www.instagram.com/indumurthy.official?igsh=NXdkZDljZGxiNG03",
+      twitter: "https://twitter.com/indumathi",
+      linkedin: "https://www.linkedin.com/in/indu-murthy/",
+      facebook: "https://facebook.com/indumathi",
+    },
+  },
+  {
+    name: "Varsha Sivanarayanan",
+    role: "CFO",
+    image: varshaImage,
+    social: {
+      instagram: "https://instagram.com/varsha",
+      twitter: "https://twitter.com/varsha",
+      linkedin: "https://linkedin.com/in/varsha",
+      facebook: "https://facebook.com/varsha",
+    },
+  },
+  {
+    name: "Arundas M V",
+    role: "CSO",
+    image: arunImage,
+    social: {
+      instagram: "https://instagram.com/arundas",
+      twitter: "https://twitter.com/arundas",
+      linkedin: "https://linkedin.com/in/arundas",
+      facebook: "https://facebook.com/arundas",
+    },
+  },
 ];
 
 const Team = () => {
@@ -32,7 +72,7 @@ const Team = () => {
               key={index}
               className="bg-gradient-to-b from-[#061428] to-[#0b1c3a] rounded-lg shadow-lg overflow-hidden p-6 flex flex-col items-center transition-all hover:shadow-xl hover:scale-105 w-full h-[450px]"
             >
-              {/* Profile Image (Fixed Min Height for Mobile) */}
+              {/* Profile Image */}
               <div className="w-full min-h-[240px] md:h-60 mb-4 flex-grow">
                 <img
                   src={member.image}
@@ -48,16 +88,16 @@ const Team = () => {
 
               {/* Social Icons */}
               <div className="flex space-x-4 mt-4">
-                <a href="https://instagram.com" className="text-white hover:text-[#E1306C] transition" target="_blank" rel="noopener noreferrer">
+                <a href={member.social.instagram} className="text-white hover:text-[#E1306C] transition" target="_blank" rel="noopener noreferrer">
                   <FaInstagram size={22} />
                 </a>
-                <a href="https://twitter.com" className="text-white hover:text-[#1DA1F2] transition" target="_blank" rel="noopener noreferrer">
+                <a href={member.social.twitter} className="text-white hover:text-[#1DA1F2] transition" target="_blank" rel="noopener noreferrer">
                   <FaXTwitter size={22} />
                 </a>
-                <a href="https://linkedin.com" className="text-white hover:text-[#0077B5] transition" target="_blank" rel="noopener noreferrer">
+                <a href={member.social.linkedin} className="text-white hover:text-[#0077B5] transition" target="_blank" rel="noopener noreferrer">
                   <FaLinkedin size={22} />
                 </a>
-                <a href="https://facebook.com" className="text-white hover:text-[#1877F2] transition" target="_blank" rel="noopener noreferrer">
+                <a href={member.social.facebook} className="text-white hover:text-[#1877F2] transition" target="_blank" rel="noopener noreferrer">
                   <FaFacebook size={22} />
                 </a>
               </div>
